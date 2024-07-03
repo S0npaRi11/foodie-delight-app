@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>
+  @if(!data.isEdit){
+      Add New Restraurant
+  }@else{
+    Edit Restraurant
+  }
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label> Name </mat-label>
+      <input type="text" matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Description </mat-label>
+       <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Location </mat-label>
+      <input type="text" matInput formControlName="location" />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="submit()" [disabled]="form.invalid || form.pristine">
+    Submit
+  </button>
+</mat-dialog-actions>

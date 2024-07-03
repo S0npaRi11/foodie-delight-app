@@ -1,0 +1,23 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "iamadmin"
+    }
+  ],
+  "restaurant": [
+    {
+      "id": "1",
+      "name": "rest 1`",
+      "description": "test",
+      "location": "test"
+    },
+    {
+      "name": "rest 2",
+      "description": "test 2",
+      "location": "test edit",
+      "id": "5728"
+    }
+  ]
+}

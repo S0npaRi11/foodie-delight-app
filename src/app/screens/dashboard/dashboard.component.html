@@ -1,0 +1,16 @@
+<div class="dashboard-wrapper">
+  <div class="actions-wrapper">
+    <button mat-button (click)="openRestraurantForm(false)"> Add New Restaurant </button>
+    <form>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Search by name" />
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div class="restraurant-list-wrapper">
+    @for(restraurant of allRestraurants$ | async; track restraurant){
+      <app-restraurant-card [restraurant]="restraurant" (delete)="handleDelete($event)" (edit)="handleEdit($event)"></app-restraurant-card>
+    }
+  </div>
+</div>
